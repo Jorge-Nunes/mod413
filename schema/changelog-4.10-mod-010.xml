@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd"
+  logicalFilePath="changelog-4.10-mod-010">
+
+
+ <changeSet author="author" id="changelog-4.10-mod-revendas">   
+	<preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="tc_revendas" />
+      </not>
+    </preConditions>
+
+    <createTable tableName="tc_revendas">
+      <column name="id" type="INT" autoIncrement="true">
+        <constraints primaryKey="true" />
+      </column>
+      <column name="code" type="VARCHAR(128)">
+        <constraints nullable="false" />
+      </column>
+      <column name="title" type="VARCHAR(128)">
+        <constraints nullable="false" />
+      </column>
+      <column name="url" type="VARCHAR(128)">
+        <constraints nullable="true" />
+      </column>
+      <column name="email" type="VARCHAR(128)">
+        <constraints nullable="true" />
+      </column>
+      <column name="phone" type="VARCHAR(128)">
+        <constraints nullable="true" />
+      </column>
+      <column name="facebook" type="VARCHAR(128)">
+        <constraints nullable="true" />
+      </column>
+      <column name="twitter" type="VARCHAR(128)">
+        <constraints nullable="true" />
+      </column>
+      <column name="instagram" type="VARCHAR(128)">
+        <constraints nullable="true" />
+      </column>
+      <column name="whatsapp" type="VARCHAR(128)">
+        <constraints nullable="true" />
+      </column>
+      <column name="invoices" type="VARCHAR(128)">
+        <constraints nullable="true" />
+      </column>
+      <column name="color1" type="VARCHAR(128)">
+        <constraints nullable="true" />
+      </column>
+      <column name="color2" type="VARCHAR(128)">
+        <constraints nullable="true" />
+      </column>
+      <column name="googlekey" type="VARCHAR(128)">
+        <constraints nullable="true" />
+      </column>
+      <column name="googleplay" type="VARCHAR(128)">
+        <constraints nullable="true" />
+      </column>
+      <column name="applestore" type="VARCHAR(128)">
+        <constraints nullable="true" />
+      </column>
+      <column name="template" type="VARCHAR(128)">
+        <constraints nullable="true" />
+      </column>
+      <column name="asaastoken" type="VARCHAR(128)">
+        <constraints nullable="true" />
+      </column>
+      <column name="paghipertoken" type="VARCHAR(128)">
+        <constraints nullable="true" />
+      </column>
+      <column name="paghiperkey" type="VARCHAR(128)">
+        <constraints nullable="true" />
+      </column>
+      <column name="logo" type="TEXT">
+        <constraints nullable="true" />
+      </column>
+      <column name="attributes" type="VARCHAR(4000)">
+        <constraints nullable="true" />
+      </column>
+    </createTable>
+
+    <modifyDataType tableName="tc_devices" columnName="attributes" newDataType="TEXT" />
+    <modifyDataType tableName="tc_users" columnName="attributes" newDataType="TEXT" />
+    <modifyDataType tableName="tc_drivers" columnName="attributes" newDataType="TEXT" />
+    <modifyDataType tableName="tc_positions" columnName="attributes" newDataType="TEXT" />
+    <modifyDataType tableName="tc_events" columnName="attributes" newDataType="TEXT" />
+
+<insert tableName="tc_revendas">
+      <column name="code" value="2ecomp" />
+      <column name="title" value="2ECOMP" />
+      <column name="url" value="https://www.2ecomp..com.br/" />
+      <column name="email" value="support@2ecomp.com.br" />
+      <column name="facebook" value="https://www.facebook.com/2ecomp/" />
+      <column name="instagram" value="https://www.instagram.com/2ecomp/" />
+      <column name="color1" value="#1f355a" />
+      <column name="color2" value="#3b4954" />
+      <column name="googleplay" value="https://play.google.com/store/apps/details?id=com.a2ecomp.rasterx_pro" />
+      <column name="applestore" value="https://apps.apple.com/il/app/raster-x-pro/id1559454539" />
+      <column name="template" value="default" />
+      <column name="invoices" value="https://central.2ecomp.com.br/cobranca" />
+      <column name="logo" value="logo.png" />
+      <column name="attributes" value="{}" />
+    </insert>
+ </changeSet>
+
+</databaseChangeLog>

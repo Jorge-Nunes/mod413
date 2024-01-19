@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd"
+  logicalFilePath="changelog-4.7-mod-002">
+
+  <changeSet author="author" id="changelog-4.7-drivers">   
+	<preConditions onFail="MARK_RAN">
+            <not><columnExists tableName="tc_drivers" columnName="photo"/></not>
+        </preConditions>      
+    <addColumn tableName="tc_drivers">
+      <column name="photo" type="VARCHAR(4000)" />
+    </addColumn>
+ 
+<addColumn tableName="tc_drivers">
+      <column name="file01" type="VARCHAR(4000)" />
+    </addColumn>
+
+<addColumn tableName="tc_drivers">
+      <column name="file02" type="VARCHAR(4000)" />
+    </addColumn>
+
+<addColumn tableName="tc_drivers">
+      <column name="file03" type="VARCHAR(4000)" />
+    </addColumn>
+
+
+ </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,11 @@
+#if($driver)
+#set($driverName = $driver.name)
+#else
+#set($driverName = $event.getString("driverUniqueId"))
+#end
+👮‍♂️ *Mudou de motorista*
+🚘 *Veículo:* $device.name
+👤 *Motorista:* $driverName
+🕒 *Data/Hora:*  _$dateTool.format("dd/MM/YYYY HH:mm:ss", $event.eventTime, $locale, $timezone)_
+#{if}($position.address)📍 *Local:* $position.address#{end}
+#{if}($position.latitude)#?#$position.latitude,$position.longitude#{end}

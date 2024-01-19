@@ -1,0 +1,7 @@
+⁉️ *Posição desconhecida*
+🚘 *Veículo:* $device.name
+📶 *Motivo:* _Possível área de sombreamento de sinal_
+🕒 *Data/Hora:*  _$dateTool.format("dd/MM/YYYY HH:mm:ss", $event.eventTime, $locale, $timezone)_
+#{if}($position.address)📍 *Local:* $position.address#{end}
+#{if}($position.latitude)#?#$position.latitude,$position.longitude#{end}
+_Obs: Caso este alerta continue por mais de 24h, mesmo com o veículo esteja em movimento  favor comunicar o suporte técnico_

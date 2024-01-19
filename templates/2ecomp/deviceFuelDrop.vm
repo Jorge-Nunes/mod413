@@ -1,0 +1,1 @@
+⛽ *Pouca Gasolina*\n🚘 *Veículo:* $device.name\n🕒 *Data/Hora:*  _$dateTool.format("dd/MM/YYYY HH:mm:ss", $event.eventTime, $locale, $timezone)_\n#{if}($position.address)📍 *Local:* $position.address#{end}\n\n#{if}($position.latitude)🛰️ *Localização (Google Maps):* https://www.google.com/maps/search/$position.latitude,$position.longitude#{end}

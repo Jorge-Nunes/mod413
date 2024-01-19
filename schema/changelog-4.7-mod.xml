@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd"
+  logicalFilePath="changelog-4.7-mod">
+
+  <changeSet author="author" id="changelog-4.7-devices">   
+	<preConditions onFail="MARK_RAN">
+            <not><columnExists tableName="tc_devices" columnName="photo"/></not>
+        </preConditions>      
+    <addColumn tableName="tc_devices">
+      <column name="photo" type="VARCHAR(4000)" />
+    </addColumn>
+ </changeSet>
+    
+<changeSet author="author" id="changelog-4.7-devices-info">   
+	<preConditions onFail="MARK_RAN">
+            <not><columnExists tableName="tc_devices" columnName="icc"/></not>
+        </preConditions>          
+<addColumn tableName="tc_devices">
+      <column name="icc" type="VARCHAR(80)" />
+    </addColumn>
+
+<addColumn tableName="tc_devices">
+      <column name="vendor" type="VARCHAR(80)" />
+    </addColumn>
+
+<addColumn tableName="tc_devices">
+      <column name="operator" type="VARCHAR(80)" />
+    </addColumn>
+<addColumn tableName="tc_devices">
+      <column name="plate" type="VARCHAR(128)" />
+    </addColumn>
+
+
+ </changeSet>
+
+<changeSet author="author" id="changelog-4.7-users">
+        <preConditions onFail="MARK_RAN">
+            <not><columnExists tableName="tc_users" columnName="photo"/></not>
+        </preConditions>
+    <addColumn tableName="tc_users">
+      <column name="photo" type="VARCHAR(4000)" />
+    </addColumn>
+  </changeSet>
+
+<changeSet author="author" id="changelog-4.7-servers">
+        <preConditions onFail="MARK_RAN">
+            <not><columnExists tableName="tc_servers" columnName="serial"/></not>
+        </preConditions>
+    <addColumn tableName="tc_servers">
+      <column name="serial" type="TEXT" />
+    </addColumn>
+  </changeSet>
+
+  <changeSet author="author" id="changelog-4.7-groups">
+
+    <preConditions onFail="MARK_RAN">
+            <not><columnExists tableName="tc_groups" columnName="document"/></not>
+        </preConditions>
+    <addColumn tableName="tc_groups">
+      <column name="document" type="VARCHAR(30)" />
+    </addColumn>
+
+    <addColumn tableName="tc_groups">
+      <column name="address" type="VARCHAR(80)" />
+    </addColumn>
+    <addColumn tableName="tc_groups">
+      <column name="neighborhood" type="VARCHAR(80)" />
+    </addColumn>
+    <addColumn tableName="tc_groups">
+      <column name="city" type="VARCHAR(80)" />
+    </addColumn>
+    <addColumn tableName="tc_groups">
+      <column name="state" type="VARCHAR(10)" />
+    </addColumn>
+    <addColumn tableName="tc_groups">
+      <column name="country" type="VARCHAR(80)" />
+    </addColumn>
+    <addColumn tableName="tc_groups">
+      <column name="postal_code" type="VARCHAR(30)" />
+    </addColumn>
+    <addColumn tableName="tc_groups">
+      <column name="email" type="VARCHAR(120)" />
+    </addColumn>
+    <addColumn tableName="tc_groups">
+      <column name="phone" type="VARCHAR(30)" />
+    </addColumn>
+
+  </changeSet>
+
+</databaseChangeLog>

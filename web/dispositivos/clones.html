@@ -1,0 +1,50 @@
+
+<!DOCTYPE html><html lang="pt-br"><head><meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="theme-color" content="#292b2c">
+<title>Lista de Dispositivos Suportados</title>
+<link rel="icon" sizes="192x192" href="../icon.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="https://www.traccar.org/stylesheets/style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+<style type="text/css">
+    	.container {
+ 		       max-width: 768px !important;
+		}
+
+		.voltar-inicio {
+		position: fixed;	
+		bottom:10px;
+		right:20px;
+		z-index: 999;
+		}	
+		.tooltip{position:absolute;z-index:1070;display:block;margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";font-style:normal;font-weight:400;line-height:1.5;text-align:left;text-align:start;text-decoration:none;text-shadow:none;text-transform:none;letter-spacing:normal;word-break:normal;word-spacing:normal;white-space:normal;line-break:auto;font-size:.875rem;word-wrap:break-word;opacity:0}
+		.tooltip.show{opacity:.9}
+		.tooltip .arrow{position:absolute;display:block;width:.8rem;height:.4rem}
+		.tooltip .arrow::before{position:absolute;content:"";border-color:transparent;border-style:solid}
+		.bs-tooltip-auto[x-placement^=top],.bs-tooltip-top{padding:.4rem 0}
+		.bs-tooltip-auto[x-placement^=top] .arrow,.bs-tooltip-top .arrow{bottom:0}
+		.bs-tooltip-auto[x-placement^=top] 
+		.arrow::before, .bs-tooltip-top .arrow::before{top:0;border-width:.4rem .4rem 0;border-top-color:#000}
+		.bs-tooltip-auto[x-placement^=right],.bs-tooltip-right{padding:0 .4rem}
+		.bs-tooltip-auto[x-placement^=right] .arrow,.bs-tooltip-right .arrow{left:0;width:.4rem;height:.8rem}
+		.bs-tooltip-auto[x-placement^=right] .arrow::before,.bs-tooltip-right .arrow::before{right:0;border-width:.4rem .4rem .4rem 0;border-right-color:#000}.bs-tooltip-auto[x-placement^=bottom],.bs-tooltip-bottom{padding:.4rem 0}.bs-tooltip-auto[x-placement^=bottom] .arrow,.bs-tooltip-bottom .arrow{top:0}.bs-tooltip-auto[x-placement^=bottom] .arrow::before,.bs-tooltip-bottom .arrow::before{bottom:0;border-width:0 .4rem .4rem;border-bottom-color:#000}.bs-tooltip-auto[x-placement^=left],.bs-tooltip-left{padding:0 .4rem}.bs-tooltip-auto[x-placement^=left] .arrow,.bs-tooltip-left .arrow{right:0;width:.4rem;height:.8rem}.bs-tooltip-auto[x-placement^=left] .arrow::before,.bs-tooltip-left .arrow::before{left:0;border-width:.4rem 0 .4rem .4rem;border-left-color:#000}.tooltip-inner{/*aumentar fundo*/max-width:400px;padding:.35rem .5rem;color:#fff;text-align:center;background-color:#000;border-radius:.25rem}.popover{position:absolute;top:0;left:0;z-index:1060;display:block;max-width:476px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";font-style:normal;font-weight:400;line-height:1.5;text-align:left;text-align:start;text-decoration:none;text-shadow:none;text-transform:none;letter-spacing:normal;word-break:normal;word-spacing:normal;white-space:normal;line-break:auto;font-size:.875rem;word-wrap:break-word;background-color:#fff;background-clip:padding-box;border:1px solid rgba(0,0,0,.2);border-radius:.3rem}.popover .arrow{position:absolute;display:block;width:1rem;height:.5rem;margin:0 .3rem}
+
+    </style>
+</head>
+<body>
+<div class="bg-default"><div class="container py-2"><h1 class="mb-2">Clones chineses</h1><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Se você possui uma unidade de rastreamento GPS chinesa sem nome ou barata, você deve ler as seguintes informações.</font></font></p><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Diferentes fabricantes e vendedores chineses classificam seus dispositivos com nomes populares similares (por exemplo, TK102, TK103, GT02A, H02 e outros), por isso é impossível identificar a porta e o protocolo corretos para esses dispositivos apenas conhecendo o nome do modelo. </font><font style="vertical-align: inherit;">Se você tiver um desses dispositivos, tente todas as seguintes portas:</font></font></p><ul><li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">5001</font></font></li><li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">5002</font></font></li><li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">5006</font></font></li><li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">5013</font></font></li><li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">5023</font></font></li><li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">5036</font></font></li><li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">5093</font></font></li></ul><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Por favor, verifique também os seguintes problemas comuns:</font></font></p><ol><li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">O dispositivo envia informações de status, mas não coordenadas de GPS. </font><font style="vertical-align: inherit;">Geralmente isso acontece com dispositivos que usam o protocolo GPS103 (porta 5001). </font><font style="vertical-align: inherit;">A solução é enviar um comando para o dispositivo para ativar o relatório de localização: </font></font><code>fix060s***n123456</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">(onde </font></font><code>060s</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">é o intervalo entre as mensagens, </font></font><code>***</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">informa ao dispositivo para continuar enviando locais periodicamente e </font></font><code>123456</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">é a senha padrão).</font></font></li><li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dispositivos que usam o protocolo TK103 (porta 5002) enviam um identificador de dispositivo de 12 dígitos em vez de IMEI. </font><font style="vertical-align: inherit;">Geralmente, ele consiste em 11 últimos dígitos do IMEI mais zero inicial. </font><font style="vertical-align: inherit;">Por exemplo, se o número IMEI for </font></font><code>123456789012345</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">, o id exclusivo seria </font></font><code>056789012345</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">. </font><font style="vertical-align: inherit;">A solução mais fácil é registrar dois dispositivos, um com IMEI completo e outro com identificador de 12 dígitos.</font></font></li></ol><p><font style="vertical-align: inherit;"></p></div></div></div><script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" crossorigin="anonymous"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    
+    <div class="voltar-inicio">
+	<button onclick="redirecionar()"><img src="voltar.png" width="64px" height="64px" data-toggle="tooltip" data-placement="left" title="VOLTAR PARA A PÁGINA INICIAL" /></a></button>
+	  
+	    <script language= "JavaScript">
+	       function redirecionar() {
+	          location.href = "./";
+	       }
+	    </script>
+	</div>
+
+</body>
+</html>

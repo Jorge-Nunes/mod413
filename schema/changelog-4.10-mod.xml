@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd"
+  logicalFilePath="changelog-4.10-mod">
+
+
+ <changeSet author="author" id="changelog-4.10-mod-users3">   
+	<preConditions onFail="MARK_RAN">
+            <not><columnExists tableName="tc_users" columnName="telegram"/></not>
+        </preConditions>      
+    <addColumn tableName="tc_users">
+      <column name="telegram" type="VARCHAR(30)" />
+    </addColumn>
+
+ </changeSet>
+
+ <changeSet author="author" id="changelog-4.10-mod-users4">   
+	<preConditions onFail="MARK_RAN">
+            <not><columnExists tableName="tc_users" columnName="whatsapp"/></not>
+        </preConditions>      
+    <addColumn tableName="tc_users">
+      <column name="whatsapp" type="VARCHAR(30)" />
+    </addColumn>
+
+ </changeSet>
+
+ <changeSet author="author" id="changelog-4.10-mod-drivers">   
+	<preConditions onFail="MARK_RAN">
+            <not><columnExists tableName="tc_drivers" columnName="document"/></not>
+        </preConditions>      
+    <addColumn tableName="tc_drivers">
+      <column name="document" type="VARCHAR(30)" />
+    </addColumn>
+
+ </changeSet>
+
+ <changeSet author="author" id="changelog-4.10-mod-drivers2">   
+	<preConditions onFail="MARK_RAN">
+            <not><columnExists tableName="tc_drivers" columnName="documentvalidat"/></not>
+        </preConditions>      
+    <addColumn tableName="tc_drivers">
+      <column name="documentvalidat" type="VARCHAR(10)" />
+    </addColumn>
+
+ </changeSet>
+
+</databaseChangeLog>

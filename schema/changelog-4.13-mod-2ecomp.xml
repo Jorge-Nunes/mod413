@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd"
+  logicalFilePath="changelog-4.13-mod-2ecomp">
+  <changeSet author="author" id="changelog-4.13-mod-2ecomp">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="tc_costs" />
+      </not>
+    </preConditions>
+    <createTable tableName="tc_costs">
+      <column name="id" type="INT" autoIncrement="true">
+        <constraints primaryKey="true" />
+      </column>
+      <column name="deviceid" type="int">
+        <constraints nullable="false" />
+      </column>
+      <column name="name" type="VARCHAR(128)">
+        <constraints nullable="false" />
+      </column>
+      <column name="type" type="VARCHAR(128)">
+        <constraints nullable="true" />
+      </column>
+      <column name="description" type="VARCHAR(4000)">
+        <constraints nullable="true" />
+      </column>
+      <column name="eventtime" type="TIMESTAMP">
+        <constraints nullable="false" />
+      </column>
+      <column name="price" type="DOUBLE" defaultValueNumeric="0">
+        <constraints nullable="false" />
+      </column>
+      <column name="attributes" type="VARCHAR(4000)">
+        <constraints nullable="true" />
+      </column>
+    </createTable>
+  
+  <createTable tableName="tc_user_cost">
+      <column name="userid" type="INT">
+        <constraints nullable="false" />
+      </column>
+      <column name="costid" type="INT">
+        <constraints nullable="false" />
+      </column>
+    </createTable>
+
+    <addForeignKeyConstraint baseTableName="tc_user_cost" baseColumnNames="costid" constraintName="fk_user_cost_costid" onDelete="CASCADE" referencedColumnNames="id" referencedTableName="tc_costs" />
+    <addForeignKeyConstraint baseTableName="tc_user_cost" baseColumnNames="userid" constraintName="fk_user_cost_userid" onDelete="CASCADE" referencedColumnNames="id" referencedTableName="tc_users" />
+    <addForeignKeyConstraint baseTableName="tc_costs" baseColumnNames="deviceid" constraintName="fk_costs_deviceid" onDelete="CASCADE" referencedColumnNames="id" referencedTableName="tc_devices" />
+
+    <update tableName="tc_servers">
+      <column name="registration" valueBoolean="false" />
+      <column name="latitude" value="-15.515402" />
+      <column name="longitude" value="-59.762529" />
+      <column name="zoom" value="4" />
+      <column name="map" value="googlec" />
+      <column name="attributes" value='{"distanceUnit":"km","speedUnit":"kmh","volumeUnit":"ltr","web.liveRouteLength":50,"web.selectZoom":17,"web.maxZoom":18,"timezone":"America/Sao_Paulo","displayMapLabel":true,"hereKey":"VHyWSJZyG8XL36TGZmEv_IZ6oEbRIDMShkD1vxMSyI4","sendlocation":true,"anchorEnable":true,"dateTimeFormat":"d/m/Y | H:mm:s"}' />
+    </update>
+
+  </changeSet>
+
+</databaseChangeLog>

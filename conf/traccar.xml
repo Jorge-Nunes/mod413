@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!DOCTYPE properties SYSTEM 'http://java.sun.com/dtd/properties.dtd'>
+
+<properties>
+
+        <entry key='config.default'>./conf/default.xml</entry>
+
+        <entry key='web.healthCheck'>false</entry>
+
+        <entry key='geocoder.enable'>true</entry>
+        <entry key='geocoder.type'>nominatim</entry>
+        <entry key='geocoder.url'>http://maps2.2ecomp.com.br/reverse.php</entry>
+        <entry key='geocoder.format'>%r, %h, %u, %t, %p, %s, %c</entry> 
+        <!-- <entry key='geocoder.reuseDistance'>20</entry>
+        <entry key='geocoder.cacheSize'>50000</entry> -->
+        <entry key='geocoder.processInvalidPositions'>false</entry>
+
+        <entry key='database.driver'>com.mysql.cj.jdbc.Driver</entry>
+        <entry key='database.url'>jdbc:mysql://172.28.10.2:3306/visaomonitoramento?serverTimezone=UTC&amp;useSSL=false&amp;ue&amp;useUnicode=yes&amp;characterEncoding=UTF-8&amp;sessionVariables=sql_mode=''</entry>
+        <entry key='database.user'>visaomonitoramento</entry>
+        <entry key='database.password'>braz2901</entry>
+        <!--     <entry key='database.historyDays'>90</entry> -->
+        <entry key='database.ignoreUnknown'>false</entry>
+        <entry key='database.registerUnknown'>true</entry>
+
+        <entry key='notificator.types'>web,firebase</entry>
+
+        <entry key='notificator.firebase.key'>AAAAK96kBII:APA91bHrqTaCl9ASypAUSVQVRxwqTdySLQ2Q2sFwNO03IYmGB7bZweM2GveLJUz_zZwUxsQbjapybk6o218W5Uu60M5AhqPZwJ0m3VvQD2gz-3o5QthtYgmzABxrtAMpDbvMK1zG_rsX</entry>
+
+        <!-- <entry key='notificator.telegram.key'>821377091:AAHOLhs0Xp3svoFMnF-BC3XTaEVyqo4MFfc</entry> -->
+        <!-- <entry key='notificator.telegram.chatId'>[YOUR ACCOUNT SID]</entry> --> 
+    
+<!--         <entry key='notificator.wtz.url'>https://hyttwths.falewhats.com.br/</entry>
+        <entry key='notificator.wtz.instanceId'>playsat</entry>
+        <entry key='notificator.wtz.licenseKey'>BAH5WJI-P7XETQA-SOJWJOQ-DJITSBQ</entry> -->
+
+        <entry key='event.overspeed.notRepeat'>true</entry>
+        <entry key='event.motionHandler'>true</entry>
+        <entry key='event.geofenceHandler'>true</entry>
+        <entry key='event.alertHandler'>true</entry>
+        <entry key='event.ignitionHandler'>true</entry>
+        <entry key='event.statusHandler'>true</entry>
+        <entry key='event.maintenanceHandler'>false</entry>
+
+        <!-- FILTROS -->
+        <entry key='filter.enable'>true</entry> <!-- ativar ou desativar a filtragem de posição -->
+        <entry key='filter.future'>86400</entry> <!-- Filtre registros com tempo de correção no futuro. Valores em segundos. !-->
+        <entry key='filter.invalid'>true</entry> <!-- Filtrar posições inválidas (campo da posicao valid == false) -->
+        <entry key='filter.zero'>true</entry>    <!-- Filtre as coordenadas zero. Latitude e longitude zero são valores teoric>
+        <entry key='filter.duplicate'>true</entry> <!- Filtrar registros duplicados (as duplicatas são detectadas pelo valor !-->
+        <entry key='filter.maxSpeed'>200</entry> <!-- Filtre os registros pelo valor de Velocidade máxima em nós. Pode ser usa>
+        <entry key='filter.skipLimit'>60</entry> <!- Prazo para a filtragem em segundos. Se a diferença horária entre a últim!-->
+        <entry key='filter.skipAttributes.enable'>true</entry>
+        <entry key='filter.skipAttributes'>alarm,armed,battery,charge,result</entry> <!-- Lista de atributos que, se presentes !-->
+
+        <entry key='processing.remoteAddress.enable'>true</entry>
+        <entry key='processing.copyAttributes.enable'>true</entry>
+        <entry key='processing.copyAttributes'>operator,power,ignition,battery,batteryLevel,charge,rssi,blocked,status,sat,iccid,driverUniqueId</entry>
+
+        <entry key='coordinates.maxError'>3000</entry>
+        <entry key='geofence.polylineDistance'>70</entry>
+
+        <entry key='processing.engineHours.enable'>true</entry>
+        <entry key='report.trip.minimalTripDuration'>30</entry>
+        <entry key='report.trip.minimalTripDistance'>1</entry>
+        <entry key='report.trip.useIgnition'>true</entry>
+        <entry key='report.trip.minimalParkingDuration'>60</entry>
+        <entry key='report.trip.minimalNoDataDuration'>600</entry>
+
+        <!-- SERVIÇO DE NOTIFICAÇOES VIA EMAIL -->
+<!--         <entry key='mail.smtp.port'>587</entry>
+        <entry key='mail.smtp.starttls.enable'>true</entry>
+        <entry key='mail.smtp.host'>relay.mailbaby.net</entry>
+        <entry key='mail.smtp.from'>suporte@alphatracking.com.br</entry>
+        <entry key='mail.smtp.auth'>true</entry>
+        <entry key='mail.smtp.username'>mb34766</entry>
+        <entry key='mail.smtp.password'>eeYEUDGbRDXtnGBZtr6a</entry> -->
+        <!-- <entry key='status.timeout'>600</entry>
+        <entry key='web.timeout'>1800</entry> -->
+        <entry key='server.timeout'>360</entry>
+
+        <!-- SERVIÇO DE NOTIFICAÇOES VIA EMAIL -->
+        <entry key='mail.smtp.port'>587</entry>
+        <entry key='mail.smtp.starttls.enable'>true</entry>
+        <entry key='mail.smtp.host'>relay.mailbaby.net</entry>
+        <entry key='mail.smtp.from'>alertas@visaomonitor.com.br</entry>
+        <entry key='mail.smtp.auth'>true</entry>
+        <entry key='mail.smtp.username'>mb34766</entry>
+        <entry key='mail.smtp.password'>eeYEUDGbRDXtnGBZtr6a</entry>
+        <!-- <entry key='status.timeout'>600</entry>
+        <entry key='web.timeout'>1800</entry> -->
+        <entry key='server.timeout'>120</entry>
+
+       <entry key='web.url'>https://acesso.visaomonitor.com.br</entry>
+
+</properties>

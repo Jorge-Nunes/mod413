@@ -1,0 +1,2 @@
+Erro desconhecido
+Data/Hora:  $dateTool.format("dd/MM/YYYY HH:mm:ss", $event.eventTime, $locale, $timezone)

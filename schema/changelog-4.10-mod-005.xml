@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd"
+  logicalFilePath="changelog-4.10-mod-005">
+
+
+ <changeSet author="author" id="changelog-4.10-mod-event-action">   
+	<preConditions onFail="MARK_RAN">
+            <not><columnExists tableName="tc_events" columnName="response"/></not>
+        </preConditions>      
+    <addColumn tableName="tc_events">
+      <column name="userid" type="INT" />
+    </addColumn>
+
+    <addColumn tableName="tc_events">
+      <column name="comment" type="VARCHAR(4000)" />
+    </addColumn>
+
+  <addColumn tableName="tc_events">
+      <column name="lastupdate" type="TIMESTAMP" />
+    </addColumn>
+
+    
+ </changeSet>
+
+</databaseChangeLog>

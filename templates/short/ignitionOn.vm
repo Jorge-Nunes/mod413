@@ -1,0 +1,4 @@
+🔑 Ligou a ignição* 🟢
+🚘 Veículo:* $device.name
+🕒 *Data/Hora:*  $dateTool.format("dd/MM/YYYY HH:mm:ss", $event.eventTime, $locale, $timezone)
+#{if}($position.address)📍 *Local:* $position.address#{end}

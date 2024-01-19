@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Plataforma de Rastreamento</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+	<link rel="stylesheet" href="lib/sweetalert/sweetalert.css">
+	<link rel="stylesheet" href="landing/assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+
+	<!-- landing Form -->
+	<div id="landing-panel" style="display:none">
+		<!-- Header -->
+		<header id="header">
+			<h1>Seja Bem Vindo!</h1>
+			<p>Digite o c&oacute;digo fornecido pela sua empresa de rastreamento<br />
+			</p>
+		</header>
+
+		<form id="landing-form" method="post" action="#">
+			<input type="text" name="code" id="code" placeholder="C&oacute;digo" required />
+			<input type="submit" value="Validar" />
+		</form>
+	</div>
+
+	<!-- login Form -->
+	<div id="login-panel" style="display:none">
+		<!-- Header -->
+		<header id="header">
+			<h1><img class="logo" src="#" style="height: 64px; width: 240px;" /></h1>
+			<h2>Acesso ao sistema!</h2>
+			<p style="font-size: 14px;">Digite as suas credenciais<br />
+			</p>
+		</header>
+		<form id="login-form" method="post" action="#">
+			<p>
+				<input type="text" name="email" id="email" placeholder="Usu&aacute;rio/Email" required style="width: 100%;" />
+			</p>
+			<p>
+				<input type="password" name="password" id="password" placeholder="Senha" required style="width: 100%;" />
+			</p>
+			<input type="button" name="login-button" value="Acessar" />
+			<input type="button" name="signup-button" value="Registrar" style="background-color: darkblue;"
+				style="display: none;" />
+
+		</form>	
+		<input id="remember" type="checkbox" name="remember-me">
+		<label for="remember">
+			Lembrar acesso
+		</label>
+		<a href="#" name="recover-button"> Esqueceu a senha?</a>
+		<br/>
+		<br />
+		
+		<br /><br /><br /><br /><br />
+		<!-- Footer -->
+		<footer id="footer">
+			<ul class="icons">
+				<li id="li_twitter"><a id="link_twitter" href="#" class="icon brands fa-twitter"><span
+							class="label">Twitter</span></a>
+				</li>
+				<li id="li_instagram"><a id="link_instagram" href="#" class="icon brands fa-instagram"><span
+							class="label">Instagram</span></a></li>
+
+				<li id="li_facebook"><a id="link_facebook" href="#" class="icon brands fa-facebook"><span
+							class="label">Facebook</span></a>
+				</li>
+				<li id="li_email"><a id="link_email" href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+
+				<li id="li_invoices"><a id="link_invoices" href="#" class="icon fa-money-bill-alt"><span
+							class="label">Faturas</span></a>
+				</li>
+
+				<li id="li_whatsapp"><a id="link_whatsapp" href="#" class="icon brands fa-whatsapp"><span
+							class="label">Suporte</span></a>
+				</li>
+
+				<li id="li_googleplay"><a id="link_googleplay" href="#" class="icon brands fa-android"><span
+							class="label">Play Store</span></a>
+				</li>
+
+				<li id="li_applestore"><a id="link_applestore" href="#" class="icon brands fa-apple"><span
+							class="label">Apple Store</span></a>
+				</li>
+
+			</ul>
+			<ul class="copyright">
+				<li><span id="provider_name"> &nbsp;</span></li>
+			</ul>
+		</footer>
+	</div>
+
+	<!-- invoices list -->
+	<div id="invoices-panel" style="display:none">
+		<!-- Header -->
+		<header id="header">
+			<h1>Faturas em aberto!</h1>
+			<p>Ao selecionar uma fatura ser&aacute; redirecionado ao agente financeiro para pagamento.<br />
+			</p>
+		</header>
+
+		<table  class="styled-table" id="invoices-table">
+			<theader>
+				<th>Tipo</th>
+				<th>Data vencimento</th>
+				<th>Valor</th>
+				<th>A&ccedil;&atilde;o</th>
+			</theader>
+			<tbody id="invoices_body">
+
+			</tbody>
+		</table>
+		
+		<form id="invoices-form" method="post" action="#">
+			<input type="button" value="Voltar" name="invoices-button" />
+		</form>
+	</div>
+
+	<!-- signup Form -->
+	<div id="signup-panel" style="display:none">
+		<!-- Header -->
+		<header id="header">
+			<h1><img class="logo" src="#" style="height: 64px; width: 240px;" /></h1>
+			<h2>Cadastro no sistema!</h2>
+			<p style="font-size: 14px;">Preencha os dados solicitados<br />
+			</p>
+		</header>
+		<form id="signup-form" method="post" action="#" enctype="application/x-www-form-urlencoded"  role="form" >
+			<p>
+				<input type="text" name="name" id="name" placeholder="Nome" required style="width: 100%;" />
+			</p>
+			<p>
+				<input type="text" name="email" id="email" placeholder="Usu&aacute;rio/Email" required style="width: 100%;" />
+			</p>
+			<p>
+				<input type="password" name="password" id="password" placeholder="Senha" required style="width: 100%;" />
+			</p>
+			<input type="button" name="signup-save-button" value="Registrar" />
+			<input type="button" name="signup-back-button" value="Voltar" style="background-color: darkblue;" />
+		</form>
+	</div>
+
+		<!-- recover Form -->
+		<div id="recover-panel" style="display:none">
+			<!-- Header -->
+			<header id="header">
+				<h1>Esqueceu sua senha?</h1>
+				<p>Digite o seu email que instruções de acesso serão enviadas para sua caixa de correio. <br />
+				</p>
+			</header>
+	
+			<form id="recover-form" method="post" action="#">
+				<input type="text" name="email" id="email" placeholder="Email de acesso" required />
+				<input type="button" name="recover-send-button" value="Recuperar" />
+			<input type="button" name="recover-back-button" value="Voltar" style="background-color: darkblue;" />
+			</form>
+		</div>
+	<!-- Scripts -->
+	<script src="lib/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+	<!-- Latest compiled and minified JavaScript -->
+
+	<script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
+	<script src="https://jqueryvalidation.org/files/dist/jquery.validate.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+	<script src="lib/sweetalert/sweetalert.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+
+	<script src="lib/jquery.cookie.js"></script>
+	<script src="landing/assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title id="site_title">&nbsp;</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="lib/sweetalert/sweetalert.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
+   
+</head>
+
+<body>
+    
+    <div id="spinner" class="no-freeze-spinner">
+  
+        <div id="no-freeze-spinner">
+          <div>
+            <i class="material-icons">
+              account_circle
+            </i>
+            <i class="material-icons">
+             home
+            </i>
+            <i class="material-icons">
+              work
+            </i>
+            <div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div id="attribution" style="left: 5px"><a href="#" id="site_url">-</a></div>
+    <!-- <div id="spinner" class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div> -->
+    <div id="popup" class="ol-popup" style="display: none">
+        <a href="#" id="popup-closer" class="ol-popup-closer" style="display: none;"></a>
+        <div>
+            <div id="popup-content"></div>
+
+        <div id="commands-buttons" style="float: right">                
+                <button type="button" id="btnLock" class="btn btn-danger" style="border-radius: 50%;"><i class="fa fa-lock" aria-hidden="true" title="Bloquear"></i></button>
+                <button type="button" id="btnUnLock" class="btn btn-success" style="border-radius: 50%;"><i class="fa fa-unlock" aria-hidden="true"  title="Desbloquear"></i></button>
+                <button type="button" id="btnStreetView" class="btn btn-default" style="border-radius: 50%;"><i class="fa fa-street-view" aria-hidden="true"  title="Visão da Rua"></i></button>
+            </div>
+        </div>
+    </div>
+    
+	  <div id="apps" style="position:absolute;bottom:0;right:0;">
+        <a id="lnkBtnAndroid" href="#" target="_blank"><img id="imgBtnAndroid" src="lib/play-store.png"  style="display:none" /></a>
+		    <a id="lnkBtnIOS" href="#" target="_blank"><img id="imgBtnIOS" src="lib/apple-store.png" style="display:none" /></a>
+    </div>
+
+  
+    <script src="lib/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
+    
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+    <script src="lib/sweetalert/sweetalert.min.js"></script>
+    <script src="lib/jquery.cookie.js"></script>
+    <script src="lib/notify/bootstrap-notify.min.js"></script>
+
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+    
+
+
+  <!-- Button trigger modal -->
+  <button id="btnCarousel" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#ModalCarousel"
+  style="display: none;">
+  &nbsp;
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="ModalCarousel" tabindex="-1" role="dialog" aria-labelledby="ModalCarouselLabel">
+  <div class="modal-dialog" role="document">
+   
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button>
+        <h4 class="modal-title" id="myModalLabel">&nbsp;</h4>
+      </div>
+      <div id="carousel-modal-demo" class="carousel slide" data-ride="carousel">
+
+        <!-- Sliding images statring here -->
+        <div class="carousel-inner">
+          <div class="item active"> 
+            <img src="#logo" alt="logo"> 
+            </div> 
+        </div>
+        <!-- Next / Previous controls here -->
+        <a class="left carousel-control" href="#carousel-modal-demo" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#carousel-modal-demo" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+
+      </div>
+      <div class="modal-footer">
+        <h4 id="myModalFooter"></h4>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<script id="loadScript" src="load.js"></script>
+</body>
+
+</html>
+

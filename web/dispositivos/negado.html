@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	
+	<title>Acesso Negado | 2E|COMP Soluções</title>
+	<link rel="stylesheet" href="style.css">
+	<style>		
+		.voltar-inicio {
+		position: fixed;	
+		bottom:10px;
+		right:20px;
+		z-index: 999;
+		}	
+	</style>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+</head>
+
+<body>
+<div class="container">
+    <div id="header"> 
+        <h2>ACESSO</h2>
+        <h1>NEGADO</h1>             
+    </div>
+          
+    <div class="warning">            
+        <p class="sign alert">Alerta!</p>
+        <p align="justify">Desculpe, você não está autorizado a acessar esta página. Se você acha que isso é um engano, entre em contato conosco.</p>
+    </div>
+			
+    <div id="footer">            
+        <div class="contact"><i class="fas fa-envelope" style="float: left; width: 25px; margin-top:17px;"></i><p class="marquee">admin@2ecomp.com.br</p></div>  
+            <p class="copyright">&copy; 2020 2E|COMP Soluções</p>
+        </div> 
+    </div>    
+    <div class="voltar-inicio">
+	<button onclick="redirecionar()"><img src="voltar.png" width="64px" height="64px" data-toggle="tooltip" data-placement="left" title="VOLTAR PARA A PÁGINA INICIAL" /></a></button>
+	  
+	    <script language= "JavaScript">
+	       function redirecionar() {
+	          location.href = "../../../../../";
+	       }
+	    </script>
+	</div>          
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script>
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+</html>
