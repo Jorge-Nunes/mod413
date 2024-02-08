@@ -36,36 +36,3 @@ Editar my.cfg e adicionar no final do arquivo
 innodb_file_per_table=1
 innodb_file_format = Barracuda
 ```
-
-## Instalação Shared Devices
-> Core
-```bash
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-```
-
-- Copie e cole o conteudo abaixo no console e tecle enter
-```bash
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-```
-
-- Instalando o node 16
-```bash
-nvm install 16
-nvm use 16
-```
-
-> Web
-```bash
-cd shared/web
-npm install -g serve
-serve -p 3000
-```
-
-> Server
-```bash
-cd shared/server
-apt install git -y
-npm install
-node index.js
-```
